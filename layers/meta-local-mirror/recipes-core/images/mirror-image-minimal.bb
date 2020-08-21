@@ -12,8 +12,14 @@ IMAGE_ROOTFS_SIZE ?= "8192"
 IMAGE_ROOTFS_EXTRA_SPACE_append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"
 
 
+# Packages from external layers
 IMAGE_INSTALL += "kernel-modules \
     mtd-utils \
     mmc-utils \
+    dropbear \
+    "
+
+# Packages from local layers
+IMAGE_INSTALL += " mechanical-mirror \
     "
 
