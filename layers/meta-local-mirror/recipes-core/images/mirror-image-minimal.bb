@@ -17,6 +17,7 @@ IMAGE_INSTALL += "kernel-modules \
     mtd-utils \
     mmc-utils \
     dropbear \
+    xauth \
     "
 
 # Packages from local layers
